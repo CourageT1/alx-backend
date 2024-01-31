@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """a class LFUCache that inherits from BaseCaching and is a caching system"""
 
 from collections import defaultdict
