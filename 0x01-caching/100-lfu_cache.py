@@ -43,8 +43,10 @@ class LFUCache(BaseCaching):
         if len(least_frequent_keys) == 1:
             discarded_key = least_frequent_keys[0]
         else:
-            discarded_key =
-            min(least_frequent_keys, key=lambda k: self.order_used.index(k))
+            discarded_key = min(
+                    least_frequent_keys, key=lambda k:
+                    self.order_used.index(k)
+                    )
         del self.cache_data[discarded_key]
         del self.frequency[discarded_key]
         self.order_used.remove(discarded_key)
