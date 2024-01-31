@@ -29,10 +29,3 @@ class MRUCache(BaseCaching):
             self.order_used.insert(0, key)
             return self.cache_data[key]
         return None
-
-    def print_cache(self):
-        """ Prints the cache with MRU order """
-        print("Current cache:")
-        for key in self.order_used:
-            print(f"{key}: {self.cache_data[key]}")
-        print()
