@@ -30,10 +30,3 @@ class LRUCache(BaseCaching):
             self.order_used.append(key)
             return self.cache_data[key]
         return None
-
-    def print_cache(self):
-        """ Prints the cache with LRU order """
-        print("Current cache:")
-        for key in self.order_used:
-            print(f"{key}: {self.cache_data[key]}")
-        print()
