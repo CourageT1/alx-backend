@@ -52,16 +52,6 @@ class LFUCache(BaseCaching):
         self.order_used.remove(discarded_key)
         print(f"DISCARD: {discarded_key}")
 
-    def print_cache(self):
-        """ Prints the cache with LFU order """
-        print("Current cache:")
-        for key in sorted(
-                self.cache_data,
-                key=cmp_to_key(lambda x, y: self._compare(x, y))
-                ):
-            print(f"{key}: {self.cache_data[key]}")
-        print()
-
     def _compare(self, x, y):
         """ Custom comparison function to sort keys based on frequency
         and order_used """
