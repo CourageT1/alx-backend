@@ -11,7 +11,6 @@ from flask import Flask, render_template, request, g
 from flask_babel import Babel, _, get_locale
 import pytz
 import datetime
-from werkzeug.utils import cached_property as locked_cached_property
 
 
 app = Flask(__name__)
