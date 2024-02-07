@@ -8,9 +8,8 @@ This script sets up a Flask app with timezone selection support.
 """
 
 from flask import Flask, render_template, request, g
-from flask_babel import Babel, _, get_locale
+from flask_babel import Babel, format_datetime
 import pytz
-import datetime
 
 
 app = Flask(__name__)
