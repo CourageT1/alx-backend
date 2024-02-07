@@ -8,8 +8,8 @@ messages.
 
 """
 
-from flask import Flask, render_template, g
-from flask_babel import Babel, _
+from flask import Flask, render_template, request, g
+from flask_babel import Babel
 
 app = Flask(__name__)
 babel = Babel(app)
